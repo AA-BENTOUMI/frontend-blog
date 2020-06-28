@@ -1,0 +1,17 @@
+<form [formGroup]="editblog" class="my-form" >
+    <div class="example-container" >
+        <mat-form-field appearance="fill" style="width: 50%;text-align: center">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="titre">
+        </mat-form-field>
+        <br>
+        <input style="display: none" name="img" id="img" type="file" (change)="onFileChange($event)" #hiddenfileinput>
+        <button (click)="hiddenfileinput.click()"  class="waves-effect waves-light btn"><i class="material-icons left">image</i>Select img</button>
+        <br>
+        <mat-form-field appearance="fill" style="width: 50%;text-align: center">
+          <mat-label>Article</mat-label>
+          <textarea matInput formControlName="article"></textarea>
+        </mat-form-field>
+      </div>
+      <button class="waves-effect waves-light btn" (click)="apdateblog()"><i class="material-icons left">add</i>add blog</button>
+      

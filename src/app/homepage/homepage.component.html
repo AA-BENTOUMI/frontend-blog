@@ -1,0 +1,20 @@
+<tr *ngFor= "let u of table ;let i=index" >
+<mat-card class="example-card" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{u.titre}}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{u.image}} alt="Photo of a Shiba Inu" >
+    <mat-card-content>
+      <p>
+        {{u.article}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Edit</button>
+      <button mat-button (click)="deleteblog()">delete</button>
+    </mat-card-actions>
+  </mat-card>
+</tr>
+  
